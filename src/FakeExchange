@@ -1,0 +1,13 @@
+// FakeExchange.java
+public class FakeExchange implements Exchange {
+    @Override
+    public float rate(String origin, String target) {
+        // Hardcoded exchange rates for testing purposes
+        if (origin.equals("USD") && target.equals("Euro")) {
+            return 0.85f;  // Example: 1 USD = 0.85 Euro
+        } else if (origin.equals("USD") && target.equals("GBP")) {
+            return 0.75f;  // Example: 1 USD = 0.75 GBP
+        }
+        return 1.0f;  // Default: No conversion
+    }
+}
